@@ -14,7 +14,18 @@ Qemu, optionally for testing the operating system.
 ## Booting
 
 for building the OS you will need to add the header files to sysroot. To do so, run `./headers.sh`. Now to run `./build.sh` to build the OS. NOTE! If you want to do anytthing again, run `./clean.sh`. To create the ISO img, run 
-`./iso.sh`. To boot the OS, use qemu. Run `./qemu.sh`. NOTE! if anything fails, run `./clean.sh` and restart. 
+`./iso.sh`. To boot the OS, use qemu. Run `./qemu.sh`. NOTE! if anything fails, run `./clean.sh` and restart.
+
+## Root dirs
+
+This might be a viable way to have the root dirs work. Maybe keep it possix and have the user and system files as two subs in the umbrella dirs
+
+/uroot has user files
+/sroot has system files
+or
+/bin/ubin
+/bin/sbin
+or keep it true linux
 
 ## Notation
 
