@@ -42,15 +42,17 @@ void terminal_putchar(char c) {
 	unsigned char uc = c;
 	terminal_putentryat(uc, terminal_color, terminal_column, terminal_row);
         switch(c) {
-            case \n:
+            case '\n':
                 terminal_row++;
                 terminal_column = 0;
                 break;
-            case terminal_column == VGA_WIDTH--:
-                terminal_column = 0;
-                break;
-            case terminal_row == VGA_HEIGH--:
+        }
+        if(++terminal_column == VGA_WIDTH) {
+            terminal_column = 0;
+            if(++terminal_row == VGA_HEIGHT) {
                 terminal_row = 0;
+            }
+        }
 }
 
 void terminal_write(const char* data, size_t size) {
