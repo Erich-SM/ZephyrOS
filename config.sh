@@ -11,7 +11,6 @@ export CC=${HOST}-gcc
 export PREFIX=/usr
 export EXEC_PREFIX=$PREFIX
 export BOOTDIR=/boot
-export BINDIR=/bin
 export LIBDIR=$EXEC_PREFIX/lib
 export INCLUDEDIR=$PREFIX/include
  
