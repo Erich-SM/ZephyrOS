@@ -1,4 +1,4 @@
-# OuroborOS
+# ZephyrOS
 
 This will only be the install instructions, you will need to bootstrap the OS if you want to boot. It currently only boots to a non-interactive screen that only display text. If you want to change the text. Edit kernel/kernel/kernel.c
 and edit the printf text.
