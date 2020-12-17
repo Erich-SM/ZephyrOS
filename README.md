@@ -31,4 +31,4 @@ New Idea. Double root system, found this out on linux when I accidently broke a 
 
 ## Notation
 
-The notation I am using for this is the greek alphabet. They go in the order of what will be build first. For example, code headed withm `/*[alpha]*/` will be coded first, `/*[beta]*/` will be made second and so on. the list of greek lettering is, Alpha, Beta, Gamma, Delta, Epsilion, Zeta, Eta, Theta, Iota, Kappa, Lambda, Mu, Nu, Xi, Omicron, Pi, Rho, Sigma, Tau, Upsilion, Phi, Chi, Psi, Omega. It is unlikely I will use any of the lower letters for one project. At least for now. 
+The notation I am using for this is the greek alphabet. They go in the order of what will be build first. For example, code headed withm `/*[alpha]*/` will be coded first, `/*[beta]*/` will be made second and so on. the list of greek lettering is, Alpha, Beta, Gamma, Delta, Epsilion, Zeta, Eta, Theta, Iota, Kappa, Lambda, Mu, Nu, Xi, Omicron, Pi, Rho, Sigma, Tau, Upsilion, Phi, Chi, Psi, Omega. It is unlikely I will use any of the lower letters for one project, At least for now. 
