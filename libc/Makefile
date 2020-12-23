@@ -47,7 +47,7 @@ $(FREEOBJS) \
 $(HOSTEDOBJS) \
 
 LIBK_OBJS=$(FREEOBJS:.o=.libk.o)
-
+#TODO: have to get ready to add musl lib or some other c lib
 #BINARIES=libc.a libk.a # Not ready for libc yet.
 BINARIES=libk.a
 
