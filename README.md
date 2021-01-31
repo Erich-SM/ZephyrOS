@@ -1,8 +1,3 @@
-### IMPORTANT
-Technical difficaulties have arised and will be fixed shortly.
-### IMPORTANT
-
-
 # ZephyrOS
 
 Documentation comming soon! (to an AMD computer near you!)
