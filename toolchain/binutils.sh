@@ -11,6 +11,10 @@ _applypatch(){
 	patch -p1 zephyrosbinutils.diff
 }
 
+_clean(){
+	rm -rf binutils-2.32.tar.gz
+}
+
 #_compile(){
 #}
 
