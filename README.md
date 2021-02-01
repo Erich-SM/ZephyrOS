@@ -1,34 +1,35 @@
 # ZephyrOS
 
-This will only be the install instructions, you will need to bootstrap the OS if you want to boot. It currently only boots to a non-interactive screen that only display text. If you want to change the text. Edit kernel/kernel/kernel.c
-and edit the printf text.
+Documentation comming soon! (to an AMD computer near you!)
 
-## Dependencies
+# Run down
 
-686-elf toolchain.
-GRUB, for the grub-mkrescue command.
-Xorriso, the .iso creation engine used by grub-mkrescue.
-GNU make 4.0 or later.
-Qemu, optionally for testing the operating system.
+This OS is fully built in C (or as much as i can do).
 
-## Booting
+utils:
+	Compiler: SCC (simple compiler) git://git.simple-cc.org/scc 
+	LibC: either mlibc or musl 
+	Compression: Lzip and liblzf *
+	Crypto: LibreSSL *
+	Shell: Dash * 
+	Text editor: vim or nano *
+	init: sinit *
+	Base: sbase *
+	Filesystem: EXT2 *
 
-for building the OS you will need to add the header files to sysroot. To do so, run `./headers.sh`. Now to run `./build.sh` to build the OS. NOTE! If you want to do anytthing again, run `./clean.sh`. To create the ISO img, run 
-`./iso.sh`. To boot the OS, use qemu. Run `./qemu.sh`. NOTE! if anything fails, run `./clean.sh` and restart.
+	Please note, I still have to shell out the OS before most can be implemented. (note the little '*') 
 
-## Root dirs
 
-This might be a viable way to have the root dirs work. Maybe keep it possix and have the user and system files as two subs in the umbrella dirs
+Structure:
+	config: for config files. Keeping the defaults will be fine
+	kernel: kernel source, drivers, info, etc
+	apps: binary files and user space apps
+	libc: havent decided yet.
 
-/uroot has user files
-/sroot has system files
-or
-/bin/ubin
-/bin/sbin
-or keep it true linux
 
-New Idea. Double root system, found this out on linux when I accidently broke a terminal when i did cd //. / is for normal root. // is a secondary root for boottime
+# Current
 
-## Notation
 
-The notation I am using for this is the greek alphabet. They go in the order of what will be build first. For example, code headed withm `/*[alpha]*/` will be coded first, `/*[beta]*/` will be made second and so on. the list of greek lettering is, Alpha, Beta, Gamma, Delta, Epsilion, Zeta, Eta, Theta, Iota, Kappa, Lambda, Mu, Nu, Xi, Omicron, Pi, Rho, Sigma, Tau, Upsilion, Phi, Chi, Psi, Omega. It is unlikely I will use any of the lower letters for one project, At least for now. 
+There is no build instructions yet. bkup/ has all the origanal files that i will intagrate soon.
+Binutils and gcc, I am hoping to change to either tcc or scc.
+NOTE, there is some shenanigans with submodules in git. And since scc is an unfollowable link `git://git.simple-cc.org/scc`. Github doesnt do anything. I will try and fix that soon. 
