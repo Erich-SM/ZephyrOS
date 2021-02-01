@@ -13,7 +13,7 @@ Compression: Lzip and liblzf \*
 Crypto: LibreSSL \*
 Shell: Dash \* 
 Text editor: vim or nano \*
-init: sinit \*
+init: sinit \* <br /> 
 Base: sbase \*
 Filesystem: EXT2 \*
 
