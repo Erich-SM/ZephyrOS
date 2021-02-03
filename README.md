@@ -1,3 +1,5 @@
+
+
 # ZephyrOS
 
 Documentation comming soon! (to an AMD computer near you!)
@@ -6,25 +8,25 @@ Documentation comming soon! (to an AMD computer near you!)
 
 This OS is fully built in C (or as much as i can do).
 
-utils:
-Compiler: SCC (simple compiler) git://git.simple-cc.org/scc 
-LibC: either mlibc or musl 
-Compression: Lzip and liblzf \*
-Crypto: LibreSSL \*
-Shell: Dash \* 
-Text editor: vim or nano \*
-init: sinit \* <br /> 
-Base: sbase \*
-Filesystem: EXT2 \*
+utils: <br/>
+Compiler: SCC (simple compiler) git://git.simple-cc.org/scc <br/> 
+LibC: either mlibc or musl  <br/>
+Compression: Lzip and liblzf \* <br/>
+Crypto: LibreSSL \* <br/>
+Shell: Dash \* <br/>
+Text editor: vim or nano \* <br/>
+init: sinit \* <br/> 
+Base: sbase \* <br/>
+Filesystem: EXT2 \* <br/>
 
 Please note, I still have to shell out the OS before most can be implemented. (note the little '\*') 
 
 
-Structure:
-config: for config files. Keeping the defaults will be fine
-kernel: kernel source, drivers, info, etc
-apps: binary files and user space apps
-libc: havent decided yet.
+Structure: <br/>
+config: for config files. Keeping the defaults will be fine <br/>
+kernel: kernel source, drivers, info, etc <br/>
+apps: binary files and user space apps <br/>
+libc: havent decided yet. <br/>
 
 
 # Current
