@@ -1,31 +1,38 @@
-_getbinutils(){
-	wget https://mirrors.syringanetworks.net/gnu/binutils/binutils-2.32.tar.gz
+_fetchbinutils(){
+    wget https://mirrors.ocf.berkeley.edu/gnu/binutils/binutils-2.32.tar.gz
 }
 
 _unpackbinutils(){
-	tar -xvpf binutils-2.32.tar.gz
-	cd binutils-2.32
+    tar -xvpf binutils-2.32.tar.gz
 }
 
-_applypatch(){
-	patch -p1 zephyrosbinutils.diff
+_patchbinutils(){
+    cd binutils-2.32/
+    patch -p1  < ../zephyros-binutils-20210201.diff
 }
 
 _clean(){
-	rm -rf binutils-2.32.tar.gz
+    rm -rf binutils-2.32.tar.gz
 }
 
-#_compile(){
-#}
-
-_main(){
-	echo "fetching binutils"
-	_getbinutils
-	echo "done \n unpacking binutils"
-	_unpackbinutils
-	echo "done \n applying patch"
-	_applypatch
-	echo "done"
+_buildbinutils(){
 }
 
-_main
+_binutils(){
+    echo "fetching binutils"
+    _fetchbinutils
+    echo "done"
+    echo "unpacking binutils"
+    _unpackbinutils
+    echo "done"
+    echo "patching binutils"
+    _patchbinutils
+    echo "done"
+    echo "cleaning.."
+    _clean
+    echo "building"
+    _buildbinutils
+    echo "done"
+}
+
+_binutils
